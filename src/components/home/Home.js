@@ -3,6 +3,7 @@ import { View, Text } from 'react-native'
 import styles from '../../styles/home'
 import WeatherToday from './WeatherToday'
 import WeatherFuture from './WeatherFuture'
+import { kelvinToDegrees } from '../../util'
 
 export default class Home extends Component {
   constructor(props) {
@@ -17,9 +18,19 @@ export default class Home extends Component {
     return {
       place: this.state.currentCity,
       weather: nowWeather.weather[0].description,
-      temperature: parseInt(nowWeather.main.temp - 273),
+      temperature: kelvinToDegrees(nowWeather.main.temp),
       todaysWeather
     }
+  }
+
+  extractMiddayWeather() {
+    const dates = Object.keys(this.state.fiveDayWeather)
+    var middayWeatherArray = []
+    for (let i = 1; i < dates.length; i++) {
+      let weatherArray = this.state.fiveDayWeather[dates[i]]
+      middayWeatherArray.push(weatherArray[weatherArray.length / 2])
+    }
+    return middayWeatherArray
   }
 
   render() {
@@ -28,11 +39,10 @@ export default class Home extends Component {
         <Text>{'Loading weather data...'}</Text>
       )
     } else {
-      console.log('Weather data loaded')
       return (
         <View style={styles.container}>
           <WeatherToday data={this.extractWeatherSummary()}/>
-          <WeatherFuture />
+          <WeatherFuture data={this.extractMiddayWeather()}/>
         </View>
       )
     }
