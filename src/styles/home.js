@@ -10,10 +10,9 @@ export default StyleSheet.create({
     flex: 1,
   },
   weatherNow: {
-    flex: 1,
+    height: 300
   },
   weatherFuture: {
-    flex: 1,
   },
   weatherToday: {
     flex: 6,

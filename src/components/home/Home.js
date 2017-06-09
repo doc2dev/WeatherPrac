@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import styles from '../../styles/home'
 import WeatherToday from './WeatherToday'
 import WeatherFuture from './WeatherFuture'
@@ -40,10 +40,10 @@ export default class Home extends Component {
       )
     } else {
       return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
           <WeatherToday data={this.extractWeatherSummary()}/>
           <WeatherFuture data={this.extractMiddayWeather()}/>
-        </View>
+        </ScrollView>
       )
     }
   }

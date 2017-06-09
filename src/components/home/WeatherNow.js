@@ -11,7 +11,7 @@ export default class WeatherNow extends Component {
       <View style={styles.weatherToday} >
         <Text style={styles.weatherNowCity}>{data.place}</Text>
         <Text style={styles.weatherNowDesc}>{weatherTitleCase}</Text>
-        <Text style={styles.weatherNowTemp}>{data.temperature + '°'}</Text>
+        <Text style={styles.weatherNowTemp}>{data.temperature}</Text>
       </View>
     )
   }
