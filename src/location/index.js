@@ -6,6 +6,7 @@ export default class Location {
       }
       const locFailure = (error) => {
         console.log('Location error: ', error)
+        reject(error)
       }
       navigator.geolocation.getCurrentPosition(locSuccess, locFailure)
     })

@@ -15,12 +15,12 @@ export default StyleSheet.create({
   weatherFuture: {
   },
   weatherToday: {
-    flex: 6,
+    height: 180,
     justifyContent: 'space-around',
     alignItems: 'center',
   },
   weatherLater: {
-    flex: 4,
+    height: 100,
   },
   weatherItem: {
     width: 40,

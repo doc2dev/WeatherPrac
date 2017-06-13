@@ -96,6 +96,9 @@ android {
             abiFilters "armeabi-v7a", "x86"
         }
     }
+    dexOptions {
+      javaMaxHeapSize "4g"
+    }
     splits {
         abi {
             reset()
@@ -126,7 +129,6 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-interactable')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
