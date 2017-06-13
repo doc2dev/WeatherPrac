@@ -29,6 +29,7 @@ export function fetchWeatherData() {
       }
       axios.get(geocodingUrl)
         .then(geocodingCallback)
+        .catch(e => console.log('Geocoding error: ', e))
     }
     location.getDeviceLocation()
       .then(locSuccess)

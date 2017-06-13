@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native'
+import {
+  View,
+  Text,
+  ScrollView,
+  Animated,
+  Platform
+} from 'react-native'
 import styles from '../../styles/home'
 import WeatherToday from './WeatherToday'
 import WeatherFuture from './WeatherFuture'
+import { kelvinToDegrees } from '../../util'
 
 export default class Home extends Component {
+  
   constructor(props) {
     super(props)
-    this.state = props
+    let ht = new Animated.Value(0)
+
+    this.state = {
+      ...props,
+      scrollY: new Animated.Value(0),
+      heightY: ht
+    }
   }
 
   extractWeatherSummary() {
@@ -17,9 +31,23 @@ export default class Home extends Component {
     return {
       place: this.state.currentCity,
       weather: nowWeather.weather[0].description,
-      temperature: parseInt(nowWeather.main.temp - 273),
+      temperature: kelvinToDegrees(nowWeather.main.temp),
       todaysWeather
     }
+  }
+
+  extractMiddayWeather() {
+    const dates = Object.keys(this.state.fiveDayWeather)
+    var middayWeatherArray = []
+    for (let i = 1; i < dates.length; i++) {
+      let weatherArray = this.state.fiveDayWeather[dates[i]]
+      middayWeatherArray.push(weatherArray[weatherArray.length / 2])
+    }
+    // Multiply array to test scrolling
+    for (let i = 0; i < 2; i++) {
+      middayWeatherArray = middayWeatherArray.concat(middayWeatherArray)
+    }
+    return middayWeatherArray.filter( item => !(!item))
   }
 
   render() {
@@ -28,11 +56,20 @@ export default class Home extends Component {
         <Text>{'Loading weather data...'}</Text>
       )
     } else {
-      console.log('Weather data loaded')
+      const scrollHandler = Animated.event([
+        { nativeEvent: { contentOffset: { y: this.state.scrollY }}}
+      ])
       return (
         <View style={styles.container}>
-          <WeatherToday data={this.extractWeatherSummary()}/>
-          <WeatherFuture />
+          <WeatherToday
+            data={this.extractWeatherSummary()}
+            scrollY={this.state.scrollY} />
+          <ScrollView
+            ref={component => { this._scrollView = component; }}
+            onScroll={scrollHandler}
+            scrollEventThrottle={16}>
+              <WeatherFuture data={this.extractMiddayWeather()} />
+          </ScrollView>
         </View>
       )
     }
@@ -43,6 +80,12 @@ export default class Home extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState( (prevState, props) => nextProps)
+    this.setState( (prevState, props) => {
+      return {
+        ...prevState,
+        fiveDayWeather: nextProps.fiveDayWeather,
+        currentCity: nextProps.currentCity
+      }
+    })
   }
 }
