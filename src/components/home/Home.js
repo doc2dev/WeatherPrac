@@ -10,9 +10,9 @@ import styles from '../../styles/home'
 import WeatherToday from './WeatherToday'
 import WeatherFuture from './WeatherFuture'
 import { kelvinToDegrees } from '../../util'
-import ParallaxView from './ParallaxView'
 
 export default class Home extends Component {
+  
   constructor(props) {
     super(props)
     let ht = new Animated.Value(0)
