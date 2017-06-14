@@ -58,6 +58,5 @@ export default StyleSheet.create({
   },
   weatherFutureItemTemp: {
     flexDirection: 'row',
-
   }
 });

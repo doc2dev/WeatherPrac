@@ -9,10 +9,11 @@ import {
 import styles from '../../styles/home'
 import WeatherToday from './WeatherToday'
 import WeatherFuture from './WeatherFuture'
+import BottomSheet from './BottomSheet'
 import { kelvinToDegrees } from '../../util'
 
 export default class Home extends Component {
-  
+
   constructor(props) {
     super(props)
     let ht = new Animated.Value(0)
@@ -44,7 +45,7 @@ export default class Home extends Component {
       middayWeatherArray.push(weatherArray[weatherArray.length / 2])
     }
     // Multiply array to test scrolling
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 5; i++) {
       middayWeatherArray = middayWeatherArray.concat(middayWeatherArray)
     }
     return middayWeatherArray.filter( item => !(!item))
@@ -66,10 +67,10 @@ export default class Home extends Component {
             scrollY={this.state.scrollY} />
           <ScrollView
             ref={component => { this._scrollView = component; }}
-            onScroll={scrollHandler}
-            scrollEventThrottle={16}>
+            onScroll={scrollHandler}>
               <WeatherFuture data={this.extractMiddayWeather()} />
           </ScrollView>
+          <BottomSheet />
         </View>
       )
     }

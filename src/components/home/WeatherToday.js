@@ -13,7 +13,8 @@ export default class WeatherToday extends Component {
       {
         height: scrollY.interpolate({
             inputRange: [-windowHeight, 0, windowHeight],
-            outputRange: [300, 250, 180]
+            outputRange: [300, 250, 180],
+            extrapolate: 'clamp'
         })
       }
     ]

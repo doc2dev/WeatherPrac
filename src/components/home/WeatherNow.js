@@ -11,7 +11,8 @@ export default class WeatherNow extends Component {
     const tempTextStyle = {
       opacity: scrollY.interpolate({
           inputRange: [-windowHeight, 0, windowHeight],
-          outputRange: [1, 1, 0]
+          outputRange: [1, 1, 0],
+          extrapolate: 'clamp'
       })
     }
     const collapseStyle = [
@@ -19,7 +20,8 @@ export default class WeatherNow extends Component {
       {
         height: scrollY.interpolate({
             inputRange: [-windowHeight, 0, windowHeight / 1.2],
-            outputRange: [180, 150, 80]
+            outputRange: [180, 150, 80],
+            extrapolate: 'clamp'
         })
       }
     ]
