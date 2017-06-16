@@ -1,0 +1,107 @@
+[
+   {
+      "dt":1497549600,
+      "main":{
+         "temp":293.55,
+         "temp_min":289.884,
+         "temp_max":293.55,
+         "pressure":835.57,
+         "sea_level":1024.91,
+         "grnd_level":835.57,
+         "humidity":76,
+         "temp_kf":3.67
+      },
+      "weather":[
+         {
+            "id":500,
+            "main":"Rain",
+            "description":"light rain",
+            "icon":"10n"
+         }
+      ],
+      "clouds":{
+         "all":56
+      },
+      "wind":{
+         "speed":2.06,
+         "deg":77.0075
+      },
+      "rain":{
+         "3h":0.12
+      },
+      "sys":{
+         "pod":"n"
+      },
+      "dt_txt":"2017-06-15 18:00:00"
+   },
+   {
+      "dt":1497560400,
+      "main":{
+         "temp":291.69,
+         "temp_min":288.935,
+         "temp_max":291.69,
+         "pressure":836.24,
+         "sea_level":1026.75,
+         "grnd_level":836.24,
+         "humidity":76,
+         "temp_kf":2.75
+      },
+      "weather":[
+         {
+            "id":802,
+            "main":"Clouds",
+            "description":"scattered clouds",
+            "icon":"03n"
+         }
+      ],
+      "clouds":{
+         "all":48
+      },
+      "wind":{
+         "speed":1.96,
+         "deg":88.5053
+      },
+      "rain":{
+
+      },
+      "sys":{
+         "pod":"n"
+      },
+      "dt_txt":"2017-06-15 21:00:00"
+   },
+   {
+      "dt":1497571200,
+      "main":{
+         "temp":288.08,
+         "temp_min":286.246,
+         "temp_max":288.08,
+         "pressure":835.18,
+         "sea_level":1026.37,
+         "grnd_level":835.18,
+         "humidity":87,
+         "temp_kf":1.83
+      },
+      "weather":[
+         {
+            "id":500,
+            "main":"Rain",
+            "description":"light rain",
+            "icon":"10n"
+         }
+      ],
+      "clouds":{
+         "all":56
+      },
+      "wind":{
+         "speed":1.16,
+         "deg":75.001
+      },
+      "rain":{
+         "3h":0.0050000000000001
+      },
+      "sys":{
+         "pod":"n"
+      },
+      "dt_txt":"2017-06-16 00:00:00"
+   }
+]
