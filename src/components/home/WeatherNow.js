@@ -18,8 +18,8 @@ export default class WeatherNow extends Component {
       styles.weatherToday,
       {
         height: scrollY.interpolate({
-            inputRange: [-windowHeight, 0, windowHeight / 1.2],
-            outputRange: [180, 150, 80]
+          inputRange: [-windowHeight, 0, windowHeight / 1.2],
+          outputRange: [180, 150, 80]
         })
       }
     ]

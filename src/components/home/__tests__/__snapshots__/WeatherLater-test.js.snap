@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather later Weather later: should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "height": 100,
+    }
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "clouds": Object {
+            "all": 56,
+          },
+          "dt": 1497549600,
+          "dt_txt": "2017-06-15 18:00:00",
+          "index": 0,
+          "main": Object {
+            "grnd_level": 835.57,
+            "humidity": 76,
+            "pressure": 835.57,
+            "sea_level": 1024.91,
+            "temp": 293.55,
+            "temp_kf": 3.67,
+            "temp_max": 293.55,
+            "temp_min": 289.884,
+          },
+          "rain": Object {
+            "3h": 0.12,
+          },
+          "sys": Object {
+            "pod": "n",
+          },
+          "weather": Array [
+            Object {
+              "description": "light rain",
+              "icon": "10n",
+              "id": 500,
+              "main": "Rain",
+            },
+          ],
+          "wind": Object {
+            "deg": 77.0075,
+            "speed": 2.06,
+          },
+        },
+        Object {
+          "clouds": Object {
+            "all": 48,
+          },
+          "dt": 1497560400,
+          "dt_txt": "2017-06-15 21:00:00",
+          "index": 1,
+          "main": Object {
+            "grnd_level": 836.24,
+            "humidity": 76,
+            "pressure": 836.24,
+            "sea_level": 1026.75,
+            "temp": 291.69,
+            "temp_kf": 2.75,
+            "temp_max": 291.69,
+            "temp_min": 288.935,
+          },
+          "rain": Object {},
+          "sys": Object {
+            "pod": "n",
+          },
+          "weather": Array [
+            Object {
+              "description": "scattered clouds",
+              "icon": "03n",
+              "id": 802,
+              "main": "Clouds",
+            },
+          ],
+          "wind": Object {
+            "deg": 88.5053,
+            "speed": 1.96,
+          },
+        },
+        Object {
+          "clouds": Object {
+            "all": 56,
+          },
+          "dt": 1497571200,
+          "dt_txt": "2017-06-16 00:00:00",
+          "index": 2,
+          "main": Object {
+            "grnd_level": 835.18,
+            "humidity": 87,
+            "pressure": 835.18,
+            "sea_level": 1026.37,
+            "temp": 288.08,
+            "temp_kf": 1.83,
+            "temp_max": 288.08,
+            "temp_min": 286.246,
+          },
+          "rain": Object {
+            "3h": 0.0050000000000001,
+          },
+          "sys": Object {
+            "pod": "n",
+          },
+          "weather": Array [
+            Object {
+              "description": "light rain",
+              "icon": "10n",
+              "id": 500,
+              "main": "Rain",
+            },
+          ],
+          "wind": Object {
+            "deg": 75.001,
+            "speed": 1.16,
+          },
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    onViewableItemsChanged={undefined}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 50,
+              "justifyContent": "space-between",
+              "width": 40,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+          >
+            Now
+          </Text>
+          <Image
+            source={
+              Object {
+                "uri": "http://openweathermap.org/img/w/10n.png",
+              }
+            }
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            }
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+          >
+            20°
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 50,
+              "justifyContent": "space-between",
+              "width": 40,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+          >
+            21
+          </Text>
+          <Image
+            source={
+              Object {
+                "uri": "http://openweathermap.org/img/w/03n.png",
+              }
+            }
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            }
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+          >
+            18°
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 50,
+              "justifyContent": "space-between",
+              "width": 40,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+          >
+            00
+          </Text>
+          <Image
+            source={
+              Object {
+                "uri": "http://openweathermap.org/img/w/10n.png",
+              }
+            }
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            }
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+          >
+            15°
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

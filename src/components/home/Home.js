@@ -12,7 +12,7 @@ import WeatherFuture from './WeatherFuture'
 import { kelvinToDegrees } from '../../util'
 
 export default class Home extends Component {
-  
+
   constructor(props) {
     super(props)
     let ht = new Animated.Value(0)

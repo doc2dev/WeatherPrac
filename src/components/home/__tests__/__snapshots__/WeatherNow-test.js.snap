@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather now:  renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 42,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontFamily": "sans-serif-medium",
+        "fontSize": 24,
+      }
+    }
+  >
+    TestPlace
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    Snowing Hard
+  </Text>
+  <View
+    style={
+      Object {
+        "opacity": 42,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "sans-serif-light",
+          "fontSize": 40,
+        }
+      }
+    >
+      23
+    </Text>
+  </View>
+</View>
+`;
