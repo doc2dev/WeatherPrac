@@ -18,12 +18,10 @@ describe('Weather now: ', () => {
   }
   const tree = renderer
     .create(<WeatherNow data={mock} scrollY={scrollY}/>)
-    .toJSON();
+    .toJSON()
 
   it('renders correctly', () => {
-    /*console.log('Test tree object: ', tree)*/
-    /*console.log('Expect object: ', expect(tree))*/
-    expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot()
   });
 
   it('should display place name', () => {
